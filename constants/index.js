@@ -11,7 +11,7 @@ export const MyProjects =[{
 },
 {
     title: "Anim8",
-    link :"https://anim88.vercel.app/",
+    link :"https://anim8-here.vercel.app",
     image: Imageone,
     description:
     "Anim8 is an engaging online platform dedicated to the world of cartoons and anime films and series. It serves as a vibrant community for fans, creators, and enthusiasts to explore, discuss, and celebrate animated storytelling..",
