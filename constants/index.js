@@ -27,7 +27,7 @@ export const MyProjects =[{
     },
     {
         title: "PleasurePerfumery",
-        link : "perfumersparadise.vercel.app",
+        link : "https://perfumersparadise.vercel.app",
         image: Imagethree,
         description:
         "PleasurePerfumery is an exquisite online fragrance boutique dedicated to providing a curated selection of fine perfumes and scents. The site offers a diverse range of fragrances from luxury brands to artisanal perfumers, catering to every preference and occasion. ",
