@@ -19,7 +19,7 @@ export const MyProjects =[{
 },
     {
         title: "CoffeeParadise",
-        link : "https://coffeeeparadise.vercel.app/",
+        link : "https://coffeeeparadise.netlify.app/Loader.html",
         image: Imagethree,
         description:
         "CoffeeParadise is a vibrant online destination for coffee lovers, offering a wide range of high-quality coffees from around the world. The site features an extensive selection of beans, blends, and brewing equipment, catering to both casual drinkers and connoisseurs. ",
