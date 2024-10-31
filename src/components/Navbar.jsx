@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 const Navbar = () => {
   return (
-    <nav className=" flex items-center justify-between py-6">
+    <nav className=" flex items-center justify-between">
         <div className="flex flex-shrink-0 items-center">
             <img className="p-6" src={Logo} alt="logo" />
         </div>
