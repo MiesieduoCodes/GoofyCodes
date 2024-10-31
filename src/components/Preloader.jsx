@@ -11,7 +11,7 @@ const Preloader = ({ onLoaded }) => {
     const timer = setTimeout(() => {
       setIsAnimating(false);
       if (onLoaded) onLoaded(); // Call the function passed as a prop to notify loading completion
-    }, 3000); // Adjust delay as needed
+    }, 5000); // Adjust delay as needed
 
     return () => clearTimeout(timer);
   }, [onLoaded]);
@@ -32,7 +32,7 @@ const Preloader = ({ onLoaded }) => {
           className="pb-16 text-3xl sm:text-6xl lg:text-8xl font-thin tracking-tight text-center"
         >
           <TypeAnimation 
-            sequence={["Developer . Photographer . Drummer .", 3000]} 
+            sequence={["Developer . Photographer . Drummer . Goofy", 5000]} 
             wrapper="span" 
             speed={20} 
             repeat={Infinity} 

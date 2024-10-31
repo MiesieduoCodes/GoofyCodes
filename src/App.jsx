@@ -13,11 +13,11 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider >
       {isLoading ? (
         <Preloader onLoaded={() => setIsLoading(false)} />
       ) : (
-        <div>
+        <div className='flex flex-col '> 
           <Navbar />
           <Hero />
           <About />
