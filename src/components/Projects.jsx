@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MyProjects } from "../../constants/index";
+import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaTools, FaPencilRuler, FaCogs, FaReact, FaNodeJs } from 'react-icons/fa';
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -16,9 +17,8 @@ const iconVariants = (duration) => ({
 
 const Projects = () => {
   return (
-    <div className=" bg-gradient-to-b from-yellow-900 to-green-900 border-b border-neutral-900 pb-4">
+    <div className="relative bg-gradient-to-b from-yellow-900 to-green-900 border-b border-neutral-900 pb-4">
       <motion.h2
-        transition={{}}
         variants={iconVariants(1.3)}
         initial="initial"
         animate="animate"
@@ -80,6 +80,17 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {/* Floating Icons */}
+      <motion.div className="absolute top-10 left-16 text-amber-400 text-4xl animate-pulse" variants={iconVariants(2)} initial="initial" animate="animate"><FaCode /></motion.div>
+      <motion.div className="absolute bottom-10 right-14 text-blue-400 text-5xl animate-pulse" variants={iconVariants(2.5)} initial="initial" animate="animate"><FaReact /></motion.div>
+      <motion.div className="absolute top-1/3 left-1/4 text-green-400 text-4xl animate-pulse" variants={iconVariants(3)} initial="initial" animate="animate"><FaNodeJs /></motion.div>
+      <motion.div className="absolute top-20 right-20 text-purple-400 text-3xl animate-pulse" variants={iconVariants(3.5)} initial="initial" animate="animate"><FaPencilRuler /></motion.div>
+      <motion.div className="absolute top-32 left-10 text-teal-400 text-4xl animate-pulse" variants={iconVariants(2.8)} initial="initial" animate="animate"><FaServer /></motion.div>
+      <motion.div className="absolute bottom-20 left-1/3 text-pink-400 text-5xl animate-pulse" variants={iconVariants(3.1)} initial="initial" animate="animate"><FaCogs /></motion.div>
+      <motion.div className="absolute bottom-10 right-1/3 text-yellow-400 text-3xl animate-pulse" variants={iconVariants(3.6)} initial="initial" animate="animate"><FaTools /></motion.div>
+      <motion.div className="absolute bottom-5 left-16 text-cyan-400 text-4xl animate-pulse" variants={iconVariants(3.9)} initial="initial" animate="animate"><FaLaptopCode /></motion.div>
+      <motion.div className="absolute top-1/2 right-1/3 text-indigo-400 text-3xl animate-pulse" variants={iconVariants(2.7)} initial="initial" animate="animate"><FaDatabase /></motion.div>
     </div>
   );
 };

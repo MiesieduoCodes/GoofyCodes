@@ -1,6 +1,7 @@
 import Hero_Image from "../Assets/freepik-export-20241031151654Urrm.png";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
+import { FaCode, FaDrum, FaCamera } from 'react-icons/fa'; // Import icons
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -9,6 +10,19 @@ const container = (delay) => ({
     opacity: 1,
     transition: { duration: 0.5, delay: delay }
   }
+});
+
+const iconVariants = (duration) => ({
+  initial: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
+    },
+  },
 });
 
 const Hero = () => {
@@ -55,7 +69,7 @@ const Hero = () => {
               className="my-4 max-w-xl py-4 text-lg font-light text-center lg:text-left"
             >
               <TypeAnimation
-                sequence={[
+                sequence={[ 
                   "I’m Goofy, passionate about making the world a brighter place through creativity and innovation. With a background in diverse fields, I’m dedicated to crafting unique solutions and inspiring positive change. My mission is to bring fresh ideas and enthusiasm to everything I do. Let’s connect and explore how we can collaborate!",
                   1000,
                 ]}
@@ -89,6 +103,21 @@ const Hero = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* Floating Icons Section */}
+      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center pointer-events-none">
+        <motion.div className="flex justify-around w-full">
+          <motion.div variants={iconVariants(1.5)} initial="initial" animate="animate">
+            <FaCode className="text-white text-6xl" />
+          </motion.div>
+          <motion.div variants={iconVariants(1.3)} initial="initial" animate="animate">
+            <FaDrum className="text-white text-6xl" />
+          </motion.div>
+          <motion.div variants={iconVariants(1.7)} initial="initial" animate="animate">
+            <FaCamera className="text-white text-6xl" />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

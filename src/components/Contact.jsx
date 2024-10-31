@@ -1,6 +1,21 @@
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
 const Contact = () => {
+  const iconVariants = {
+    float: {
+      y: [0, -15, 0],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="bg-gradient-to-b from-teal-900 to-teal-900 border-b border-neutral-900 pb-16">
+    <div className="relative bg-gradient-to-b from-teal-900 to-teal-900 border-b border-neutral-900 pb-16">
       <h2 className="my-20 text-center text-4xl text-white">
         Get In <span className="text-neutral-400">Touch</span>
       </h2>
@@ -18,6 +33,32 @@ const Contact = () => {
           Miesieduoveria@gmail.com
         </a>
       </div>
+
+      {/* Enhanced Floating Icons */}
+      <motion.div
+        className="absolute top-10 left-10 text-cyan-500 text-5xl drop-shadow-lg animate-pulse"
+        variants={iconVariants}
+        animate="float"
+        style={{ filter: "drop-shadow(0 0 10px #0ff)" }}
+      >
+        <FaMapMarkerAlt />
+      </motion.div>
+      <motion.div
+        className="absolute top-40 right-10 text-yellow-400 text-5xl drop-shadow-lg animate-pulse"
+        variants={iconVariants}
+        animate="float"
+        style={{ filter: "drop-shadow(0 0 10px #ff0)" }}
+      >
+        <FaPhone />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-20 left-20 text-pink-400 text-5xl drop-shadow-lg animate-pulse"
+        variants={iconVariants}
+        animate="float"
+        style={{ filter: "drop-shadow(0 0 10px #f0f)" }}
+      >
+        <FaEnvelope />
+      </motion.div>
     </div>
   );
 };
