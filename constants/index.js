@@ -19,7 +19,7 @@ export const MyProjects =[{
 },
     {
         title: "CoffeeParadise",
-        link : "https://coffeeparadise.netlify.app/",
+        link : "https://coffeeeparadise.netlify.app/Loader.html",
         image: Imagethree,
         description:
         "CoffeeParadise is a vibrant online destination for coffee lovers, offering a wide range of high-quality coffees from around the world. The site features an extensive selection of beans, blends, and brewing equipment, catering to both casual drinkers and connoisseurs. ",
@@ -27,7 +27,7 @@ export const MyProjects =[{
     },
     {
         title: "PleasurePerfumery",
-        link : "perfumeparadise.vercel.app",
+        link : "https://perfumersparadise.vercel.app",
         image: Imagethree,
         description:
         "PleasurePerfumery is an exquisite online fragrance boutique dedicated to providing a curated selection of fine perfumes and scents. The site offers a diverse range of fragrances from luxury brands to artisanal perfumers, catering to every preference and occasion. ",
