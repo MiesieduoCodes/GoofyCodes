@@ -1,3 +1,4 @@
+import  { useState } from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -5,21 +6,27 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import { ThemeProvider } from './context/ThemeProvider'; // Ensure this path is correct
+import { ThemeProvider } from './context/ThemeProvider';
+import Preloader from "./components/Preloader";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <ThemeProvider> {/* Wrap your application in the ThemeProvider */}
-      <div>
-        <div ></div>
-        <Navbar />
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
+    <ThemeProvider>
+      {isLoading ? (
+        <Preloader onLoaded={() => setIsLoading(false)} />
+      ) : (
+        <div>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+        </div>
+      )}
     </ThemeProvider>
   );
 };
