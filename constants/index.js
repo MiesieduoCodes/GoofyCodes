@@ -3,7 +3,7 @@ import Imagetwo from "../src/Assets/iPhone 14 Pro - 5.png";
 import Imagethree from "../src/Assets/Screenshot 2024-08-02 115705.png";
 export const MyProjects =[{
     title: "Splash Clothing Cart",
-    link : "google.com",
+    link : "splash-nu.vercel.app",
     image: Imagetwo,
     description:
     "Splash is a modern, user-friendly clothing line website designed to offer a seamless shopping experience for fashion enthusiasts. The site features a clean, aesthetically pleasing design with intuitive navigation, making it easy for users to find and purchase their favorite items.",
