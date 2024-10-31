@@ -1,5 +1,5 @@
-
 import { motion } from "framer-motion";
+import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDatabase } from "react-icons/fa";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -16,7 +16,34 @@ const iconVariants = (duration) => ({
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-800 via-gray-900 to-indigo-900 py-16 text-gray-200">
+    <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-indigo-900 py-16 text-gray-200">
+      {/* Floating Icons */}
+      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/3 text-gray-100">
+        <motion.div variants={iconVariants(1.5)} initial="initial" animate="animate">
+          <FaHtml5 size={50} />
+        </motion.div>
+      </div>
+      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 translate-y-1/3 text-gray-100">
+        <motion.div variants={iconVariants(1.8)} initial="initial" animate="animate">
+          <FaCss3Alt size={50} />
+        </motion.div>
+      </div>
+      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 -translate-y-1/3 text-gray-100">
+        <motion.div variants={iconVariants(2)} initial="initial" animate="animate">
+          <FaJs size={50} />
+        </motion.div>
+      </div>
+      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/3 text-gray-100">
+        <motion.div variants={iconVariants(2.3)} initial="initial" animate="animate">
+          <FaNodeJs size={50} />
+        </motion.div>
+      </div>
+      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 translate-y-2/3 text-gray-100">
+        <motion.div variants={iconVariants(2.6)} initial="initial" animate="animate">
+          <FaDatabase size={50} />
+        </motion.div>
+      </div>
+
       <div className="text-center mb-12">
         <motion.h2
           variants={iconVariants(1.3)}
@@ -29,7 +56,6 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap justify-between items-center max-w-5xl mx-auto px-4">
-        
         {/* Image Section */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
@@ -37,7 +63,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0"
         >
-
+          {/* Optional image can go here */}
         </motion.div>
 
         {/* Text Section */}
