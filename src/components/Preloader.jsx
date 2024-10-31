@@ -2,7 +2,34 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";  
 import { TypeAnimation } from 'react-type-animation';
 import PropTypes from 'prop-types'; 
-import { FaCode, FaCameraRetro, FaDrum, FaEnvelope, FaProjectDiagram } from 'react-icons/fa'; // Import the icons
+import { 
+  FaCode, 
+  FaCameraRetro, 
+  FaDrum, 
+  FaEnvelope, 
+  FaProjectDiagram, 
+  FaBriefcase, 
+  FaCertificate,  
+  FaUserGraduate, 
+  FaGlobe, 
+  FaMedal, 
+  FaLaptop,  
+  FaChartLine, 
+  FaTools 
+} from 'react-icons/fa'; 
+
+const iconVariants = (delay) => ({
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: delay,
+      ease: "easeOut"
+    }
+  }
+});
 
 const Preloader = ({ onLoaded }) => {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -14,7 +41,6 @@ const Preloader = ({ onLoaded }) => {
       if (onLoaded) onLoaded(); 
     }, 5000); 
 
-    // Simulate loading progress
     const progressInterval = setInterval(() => {
       setLoadingProgress((prev) => {
         if (prev < 100) return prev + 10;
@@ -61,13 +87,20 @@ const Preloader = ({ onLoaded }) => {
       </div>
 
       {/* Icons */}
-      <div className="flex justify-center mt-8 space-x-4 text-white text-2xl">
-        <FaCode />
-        <FaCameraRetro />
-        <FaDrum />
-        <FaEnvelope />
-        <FaProjectDiagram />
-        {/* Add more icons as needed */}
+      <div className="relative w-full h-full flex justify-center mt-8 space-x-4 text-white text-2xl">
+        <motion.div className="absolute top-5 left-5 text-orange-400 text-4xl animate-pulse" variants={iconVariants(1)} initial="initial" animate="animate"><FaCode /></motion.div>
+        <motion.div className="absolute top-20 right-10 text-yellow-400 text-5xl animate-pulse" variants={iconVariants(1.2)} initial="initial" animate="animate"><FaCameraRetro /></motion.div>
+        <motion.div className="absolute bottom-10 left-10 text-red-400 text-4xl animate-pulse" variants={iconVariants(1.4)} initial="initial" animate="animate"><FaDrum /></motion.div>
+        <motion.div className="absolute bottom-20 right-20 text-blue-400 text-3xl animate-pulse" variants={iconVariants(1.6)} initial="initial" animate="animate"><FaEnvelope /></motion.div>
+        <motion.div className="absolute top-1/3 left-1/4 text-green-400 text-4xl animate-pulse" variants={iconVariants(1.8)} initial="initial" animate="animate"><FaProjectDiagram /></motion.div>
+        <motion.div className="absolute top-1/4 left-10 text-purple-400 text-5xl animate-pulse" variants={iconVariants(2)} initial="initial" animate="animate"><FaBriefcase /></motion.div>
+        <motion.div className="absolute bottom-5 left-1/3 text-yellow-400 text-4xl animate-pulse" variants={iconVariants(2.2)} initial="initial" animate="animate"><FaCertificate /></motion.div>
+        <motion.div className="absolute top-5 right-5 text-teal-400 text-4xl animate-pulse" variants={iconVariants(2.4)} initial="initial" animate="animate"><FaUserGraduate /></motion.div>
+        <motion.div className="absolute top-10 right-10 text-indigo-400 text-3xl animate-pulse" variants={iconVariants(2.6)} initial="initial" animate="animate"><FaGlobe /></motion.div>
+        <motion.div className="absolute top-32 left-20 text-green-400 text-4xl animate-pulse" variants={iconVariants(2.8)} initial="initial" animate="animate"><FaMedal /></motion.div>
+        <motion.div className="absolute bottom-10 left-1/4 text-indigo-400 text-5xl animate-pulse" variants={iconVariants(3)} initial="initial" animate="animate"><FaLaptop /></motion.div>
+        <motion.div className="absolute bottom-20 right-1/3 text-purple-400 text-3xl animate-pulse" variants={iconVariants(3.2)} initial="initial" animate="animate"><FaChartLine /></motion.div>
+        <motion.div className="absolute top-1/2 left-1/4 text-teal-400 text-4xl animate-pulse" variants={iconVariants(3.4)} initial="initial" animate="animate"><FaTools /></motion.div>
       </div>
     </motion.div>
   );
