@@ -1,4 +1,4 @@
-
+import Hero_Image from "../Assets/freepik-export-20241031151654Urrm.png";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -77,7 +77,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section */}
-        {/* <div className="w-full lg:w-1/2 lg:p-8 mt-10 lg:mt-0">
+        <div className="w-full lg:w-1/2 lg:p-8 mt-10 lg:mt-0">
           <div className="flex justify-center lg:justify-end">
             <motion.img
               initial={{ x: 100, opacity: 0 }}
@@ -88,7 +88,7 @@ const Hero = () => {
               className="w-3/4 lg:w-full max-w-lg shadow-lg rounded-lg transform hover:scale-105 transition"
             />
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

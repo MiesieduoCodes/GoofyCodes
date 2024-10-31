@@ -18,29 +18,34 @@ const About = () => {
   return (
     <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-indigo-900 py-16 text-gray-200">
       {/* Floating Icons */}
-      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/3 text-gray-100">
+      <div className="absolute top-5 left-5 text-gray-100">
         <motion.div variants={iconVariants(1.5)} initial="initial" animate="animate">
           <FaHtml5 size={50} />
         </motion.div>
       </div>
-      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 translate-y-1/3 text-gray-100">
+      <div className="absolute top-5 right-5 text-gray-100">
         <motion.div variants={iconVariants(1.8)} initial="initial" animate="animate">
           <FaCss3Alt size={50} />
         </motion.div>
       </div>
-      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 -translate-y-1/3 text-gray-100">
+      <div className="absolute bottom-5 left-5 text-gray-100">
         <motion.div variants={iconVariants(2)} initial="initial" animate="animate">
           <FaJs size={50} />
         </motion.div>
       </div>
-      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/3 text-gray-100">
+      <div className="absolute bottom-5 right-5 text-gray-100">
         <motion.div variants={iconVariants(2.3)} initial="initial" animate="animate">
           <FaNodeJs size={50} />
         </motion.div>
       </div>
-      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 translate-y-2/3 text-gray-100">
+      <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-gray-100">
         <motion.div variants={iconVariants(2.6)} initial="initial" animate="animate">
           <FaDatabase size={50} />
+        </motion.div>
+      </div>
+      <div className="absolute top-1/2 right-5 transform -translate-y-1/2 text-gray-100">
+        <motion.div variants={iconVariants(2.8)} initial="initial" animate="animate">
+          <FaHtml5 size={50} />
         </motion.div>
       </div>
 
