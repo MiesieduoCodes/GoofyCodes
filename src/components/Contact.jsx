@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-blue-900 border-b border-neutral-900 pb-16">
+    <div className="bg-gradient-to-b from-teal-900 to-teal-900 border-b border-neutral-900 pb-16">
       <h2 className="my-20 text-center text-4xl text-white">
         Get In <span className="text-neutral-400">Touch</span>
       </h2>

@@ -13,7 +13,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="relative border-b border-neutral-900 pb-12 lg:mb-35 bg-gradient-to-b from-indigo-800 via-purple-800 to-black text-white">
+    <div className="relative border-b border-neutral-900 pb-12 lg:mb-35 bg-gradient-to-b from-blue-900 to-purple-900 text-white">
       <div className="flex px-14 flex-wrap lg:items-center lg:justify-between">
         
         {/* Left Section */}

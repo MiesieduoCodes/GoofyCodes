@@ -20,7 +20,7 @@ const iconVariants = (duration) => ({
 
 const Skills = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-purple-900 border-b border-neutral-800 pb-24">
+    <div className="bg-gradient-to-b from-pink-900 to-orange-900 border-b border-neutral-800 pb-24">
       <motion.h1
         transition={{}}
         variants={iconVariants(1.3)}

@@ -16,7 +16,7 @@ const iconVariants = (duration) => ({
 
 const About = () => {
   return (
-    <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-indigo-900 py-16 text-gray-200">
+    <div className="relative bg-gradient-to-b from-purple-900 to-pink-900 py-16 text-gray-200">
       {/* Floating Icons */}
       <div className="absolute top-5 left-5 text-gray-100">
         <motion.div variants={iconVariants(1.5)} initial="initial" animate="animate">

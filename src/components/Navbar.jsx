@@ -7,12 +7,12 @@ import { FaWhatsapp } from "react-icons/fa";
 const Navbar = () => {
   return (
     
-   <nav className=" flex items-center justify-between py-3 bg-gradient-to-b from-indigo-800 via-purple-800" >
+   <nav className=" flex items-center justify-between py-3 bg-gradient-to-b from-sky-900 to-blue-900" >
         <div className="flex flex-shrink-0 items-center">
             <img className="p-6" src={Logo} alt="logo" />
         </div>
 
-        <div className="m-8 flex items-center justify-center gap-4 text-3xl">
+        <div className="m-8 flex items-center justify-center gap-4 text-4xl text-white">
            <a href="https://www.linkedin.com/in/goofyphotography209/"> <FaLinkedin /></a>
             <a href="https://github.com/MiesieduoCodes"><FaGithub /></a>
             <a href="https://www.instagram.com/goofy_did_this/"><FaInstagram /></a>
